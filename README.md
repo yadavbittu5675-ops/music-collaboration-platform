@@ -1,112 +1,90 @@
-# 🎧 Music Collaboration Platform
+# music-player-gui-java
+🎧 A Java Swing-based Music Sharing &amp; Audio Player application with login UI, music selection, WAV playback support, sharing list, and dynamic volume control. Features include file chooser, album art preview, sound visualizer, volume slider, and a clean modern interface. Built using Java Swing &amp; Java Sound API.
+🎵 Java Music Sharing & Audio Player
 
-A lightweight Java Swing desktop application for music sharing and playback. This project provides a simple login UI, music selection, WAV playback support, a sharing list to exchange tracks with collaborators, and a dynamic volume control. It's ideal as a starter platform for learning desktop audio handling in Java and for small-scale local music collaboration workflows.
+🎵 Java Music Sharing & Audio Player
 
-## Key Features
-- Login screen (local / demo user support)
-- File chooser for selecting audio files
-- WAV audio playback (core support)
-- Play, Pause, Stop controls
-- Dynamic volume control (slider)
-- Playlist / Sharing list to add and "share" tracks with collaborators (local simulation)
-- Album art display (when available)
-- Simple, extensible Java Swing UI — easy to modify and extend
+A modern Java Swing-based Music Player + Sharing Platform that allows users to:
 
-## Screenshot
-(Replace these placeholders with real screenshots)
-- Login screen: assets/screenshots/login.png
-- Player screen: assets/screenshots/player.png
+✔ Select music
+✔ Share music in a playlist
+✔ Play WAV audio files
+✔ Control volume
+✔ Pause playback
+✔ Enjoy a built-in animated visualizer
 
-## Technology
-- Java SE (Java 8+ recommended)
-- Java Swing for UI
-- javax.sound.sampled (or a similar audio API) for WAV playback
-- Plain files and local data structures for playlists/sharing list
+📌 How It Works
 
-## Prerequisites
-- Java 8 or newer installed (JDK recommended)
-- An IDE such as IntelliJ IDEA or Eclipse (recommended for development)
-- Optional: Maven or Gradle if project includes build files
+Login Page: User enters a username and clicks "Login".
 
-## Getting Started
+Home Page:
 
-1. Clone the repository
-   git clone https://github.com/yadavbittu5675-ops/music-collaboration-platform.git
-   cd music-collaboration-platform
+Click "Select Song" to choose a WAV file.
 
-2. Build & Run (two common approaches)
+Click "Play" to start playing the song.
 
-- If the project uses Maven
-  - mvn clean package
-  - java -jar target/music-collaboration-platform.jar
+Use "Pause" to stop playback temporarily.
 
-- If the project uses Gradle
-  - ./gradlew build
-  - java -jar build/libs/music-collaboration-platform.jar
+Adjust the volume using the slider.
 
-- If there is no build system configured, run from your IDE:
-  - Open the project in IntelliJ IDEA / Eclipse
-  - Locate the application's main class (for example: Main.java or App.java) and run it
-  - Or compile and run manually:
-    - javac -d out $(find src -name "*.java")
-    - java -cp out com.yourpackage.Main
+Click "Share" to add the song to the shared song list.
 
-Note: Replace main-class/package names above with the actual ones present in the codebase.
 
-## Usage
-- Launch the app
-- Login using demo/local credentials (or create a user if that feature exists)
-- Use the File -> Open (or the Add button) to browse and select a WAV file
-- Use Play / Pause / Stop to control playback
-- Adjust the volume slider to change playback volume
-- Add tracks to the Sharing List and use the Share functionality to simulate sending tracks to collaborators (local workflow)
+🚀 Features
+🔐 Login Page
 
-## Supported Formats
-- WAV (primary support)
-- You may add support for MP3/OGG via third-party libraries (e.g., JLayer, Tritonus, or JCodec) — see Roadmap
+Simple login screen
 
-## Project Structure (example)
-- src/ — Java source files
-- assets/ — images, sample audio, album art
-- docs/ — design notes, API docs
-- README.md — this file
+User must enter a username to continue
 
-Adjust paths above based on the actual repository layout.
+🏠 Home Dashboard
 
-## Development & Extensibility
-- UI: Replace Swing with JavaFX for modern UI if desired
-- Networking: Implement a simple server or P2P layer to actually send files between users
-- Formats: Add decoders for MP3/AAC/OGG for broader format support
-- Persistence: Save playlists and shared lists to disk (JSON or embedded DB)
-- Tests: Add unit/integration tests for audio handling and UI components
+Beautiful GUI built using Java Swing
 
-## Troubleshooting
-- "No audio device" errors: Ensure your system has audio output and Java audio permissions
-- WAV files not playing: Confirm the file is a standard PCM WAV. Compressed WAVs may not be supported by javax.sound.sampled.
-- App fails to start: Check console logs for missing class/main-class errors. Run from IDE to get more detailed trace.
+Album art preview
 
-## Contributing
-Contributions are welcome!
-- Fork the repo
-- Create a feature branch: git checkout -b feat/your-feature
-- Commit your changes and open a Pull Request
-- Describe your changes clearly and include screenshots or logs if applicable
-- Report bugs or feature requests via Issues
+Animated visualizer
 
-## Roadmap
-- Add real multi-user sharing over the network
-- Support for MP3 and other popular formats
-- Better metadata handling (ID3 tags) and improved album art display
-- Persistent playlists and user accounts
-- UI polish: theming, responsive layout
+Volume slider
 
-## License
-This project is released under the MIT License. See LICENSE for details.
+Shared songs list
 
-## Contact
-Project maintainer: yadavbittu5675-ops  
-For questions, issues, or collaboration ideas, open an issue or reach out via GitHub.
+🎶 Music Functionality
 
+Select songs from system
+
+Share songs (added to the playlist list)
+
+Play WAV audio using Java Sound API
+
+Pause music
+
+Smooth volume control (0–100%)
+
+📜 Code Overview
+Key Files
+
+music_player.java – Main application
+
+Contains:
+
+Login page
+
+Home page
+
+Music player
+
+Volume controller
+
+WAV playback
+
+⚡ Notes
+
+The application only supports WAV audio files.
+
+Volume adjustment works only while a song is playing.
+
+The shared song list only persists during the runtime of the application (no database or file storage implemented).
    
   
       
